@@ -130,14 +130,14 @@ class Calendar extends Component {
 
   // scroll the horizontal calendar so that selected date is visible
   componentDidUpdate() {
-    const horizontalScrollView = this.horizontalScrollViewRef.current;
-    if (horizontalScrollView) {
-      const windowWidth = Dimensions.get('window').width;
-      horizontalScrollView.scrollTo({
-        x: horizontalScrollViewOffset * windowWidth,
-        animated: true
-      });
-    }
+//     const horizontalScrollView = this.horizontalScrollViewRef.current;
+//     if (horizontalScrollView) {
+//       const windowWidth = Dimensions.get('window').width;
+//       horizontalScrollView.scrollTo({
+//         x: horizontalScrollViewOffset * windowWidth,
+//         animated: true
+//       });
+//     }
   }
 
   updateMonth(day, doNotTriggerListeners) {
@@ -328,6 +328,7 @@ class Calendar extends Component {
               style={[this.style.monthView, {marginBottom: 10}]}
               horizontal
               ref={this.horizontalScrollViewRef}
+              showsHorizontalScrollIndicator={false}
             >
               {weeks}
             </ScrollView>
